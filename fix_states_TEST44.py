@@ -4,7 +4,8 @@ from scipy.spatial import distance as dist
 
 #Change filepath to appropriate path in server
 #filepath = '/Users/frankanayet/Documents/Research/Personal/Maps/'
-filepath = '/Users/frankanayet/Desktop/Maps/'
+#filepath = '/Users/frankanayet/Desktop/Maps/'
+filepath = '/scratch2/Frank_Files/'
 
 state_dict = {'1':'AL','2':'AK','4':'AZ','5':'AR','6':'CA','8':'CO','9':'CT','10':'DE',
               '11':'DC','12':'FL','13':'GA','15':'HI','16':'ID','17':'IL','18':'IN',
@@ -45,7 +46,7 @@ for st in states:
 	print 4
 	#grouped.Labels = grouped.Labels.round()
 	print 5
-	xxy = pd.read_csv('xx_y_state_'+st+'_NAD83_FULL.csv')
+	xxy = pd.read_csv(filepath+'xx_y_state_'+st+'_NAD83_FULL.csv')
 	print 6
 	xxy_grouped = xxy.groupby('GISJOIN').mean()
 	print 7
